@@ -35,3 +35,17 @@ export default function LogoTicker() {
         </section>
     )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
