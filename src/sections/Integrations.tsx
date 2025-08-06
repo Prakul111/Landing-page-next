@@ -6,6 +6,7 @@ import relumeIcon from "@/assets/images/relume-logo.svg"
 import framerIcon from "@/assets/images/framer-logo.svg"
 import githubIcon from "@/assets/images/github-logo.svg"
 import Image from "next/image";
+import IntegrationColumn from "@/components/IntegrationsColumn";
 
 const integrations = [
     { name: "Figma", icon: figmaIcon, description: "Figma is a collaborative interface design tool." },
@@ -16,29 +17,32 @@ const integrations = [
     { name: "GitHub", icon: githubIcon, description: "GitHub is the leading platform for code collaboration." },
 ];
 
+
+export type IntegrationsType = typeof integrations;
+
+
 export default function Integrations() {
     return (
         <section className="py-24 overflow-hidden">
             <div className="container">
-                <Tag>Integrations</Tag>
-                <h2 className="text-6xl font-medium mt-6">Play well with <span className="text-lime-400">others</span></h2>
-                <p className="text-white/50 mt-4 text-lg">Layers seamlessly connect with your favourite tools, making it easy to plug into any
+                <div className="grid lg:grid-cols-2 items-center lg:gap-16">
+                    <div>
+                        <Tag>Integrations</Tag>
+                    <h2 className="text-6xl font-medium mt-6">Play well with <span className="text-lime-400">others</span></h2>
+                    <p className="text-white/50 mt-4 text-lg">Layers seamlessly connect with your favourite tools, making it easy to plug into any
                     workflow and collaborate platforms.
-                </p>
-                <div>
-                    <div className="flex flex-col gap-4 pb-4">
-                    {integrations.map(integration => (
-                        <div key={integration.name} className="bg-neutral-900 border border-white/10 rounded-3xl p-6">
-                            <div className="flex items-center justify-center">
-                                <Image src={integration.icon} 
-                                       alt={`${integration.name} icon`} 
-                                       className="size-24"
-                                       />
-                            </div>
-                            <h3 className="text-3xl text-center mt-6">{integration.name}</h3>
-                            <p className="text-center text-white/50 mt-2">{integration.description}</p>
-                        </div>
-                    ))}
+                    </p>
+                    </div>
+                    <div>
+                        <div className="h-[400px] lg:h-[800px] overflow-hidden grid md:grid-cols-2 gap-4 mt-8 lg:mt-0 
+                                [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]">
+                        <IntegrationColumn integrations={integrations}/>
+                        <IntegrationColumn integrations={integrations.slice().reverse()}
+                        className="hidden md:flex"
+                        />
+                    </div>
+                     
+               
                 </div>
                 </div>
             </div>
