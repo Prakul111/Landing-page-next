@@ -68,22 +68,26 @@ export default function Features() {
                 <FeatureCard 
                 title="Interactive Prototyping"
                 description="Engage your clients with prototypes that reacts to user actions"
-                className="md:col-span-2 lg:col-span-1"
+                className="md:col-span-2 lg:col-span-1 group"
                 >
                     <div className="aspect-video flex items-center justify-center">
-                        <p className="text-4xl font-extrabold text-white/20 text-center">
-                        We've achieved <span className="bg-gradiant-to-r from-purple-400 to-pink-400 bg-clip-text bg-transparent">incredible</span> growth this year</p>
+                        <p className="text-4xl font-extrabold text-white/20 group-hover:text-white/10 transition duration-500 text-center">
+                        We've achieved <span className="bg-gradiant-to-r from-purple-400 to-pink-400 bg-clip-text bg-transparent relative">
+                            <span>incredible</span>
+                            <video src="/assets/gif-incredible.mp4" autoPlay loop muted playsInline 
+                            className="absolute bottom-full left-1/2 -translate-x-1/2 rounded-2xl shadow-xl opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none"/>
+                            </span> growth this year</p>
                     </div>
                 </FeatureCard>
                 <FeatureCard 
                 title="Keyboard quick actions"
                 description="Powerful commands to help you to create designs more quickly"
-                className="md:col-span-2 lg:col-span-1 md:col-start-2 lg:col-start-auto "
+                className="md:col-span-2 lg:col-span-1 md:col-start-2 lg:col-start-auto group"
                 >
                     <div className="aspect-video flex items-center justify-center gap-4">
-                             <Key className="w-28">shift</Key>       
-                             <Key>alt</Key>
-                             <Key>C</Key>       
+                             <Key className="w-28 outline outline-2 outline-offset-4 outline-transparent group-hover:outline-lime-400 transition-all duration-500 group-hover:translate-y-1">shift</Key>       
+                             <Key className="outline outline-2 outline-offset-4 outline-transparent group-hover:outline-lime-400 transition-all duration-500 group-hover:translate-y-1 delay-150">alt</Key>
+                             <Key className="outline outline-2 outline-offset-4 outline-transparent group-hover:outline-lime-400 transition-all duration-500 group-hover:translate-y-1 delay-300">C</Key>       
                     </div>
                 </FeatureCard>
             </div>
@@ -91,9 +95,9 @@ export default function Features() {
                 {features.map(feature => 
                     <div key={feature} 
                     className="bg-neutral-900 border border-white/10 
-                    inline-flex px-3 md:px-5 py-1.5 md:py-2 rounded-2xl gap-3 items-center">
+                    inline-flex px-3 md:px-5 py-1.5 md:py-2 rounded-2xl gap-3 items-center hover:scale-125 transitio duration-200 group">
                         <span className="bg-lime-400 text-neutral-950 
-                        size-5 rounded-full inline-flex items-center justify-center text-xl">★</span>
+                        size-5 rounded-full inline-flex items-center justify-center text-xl group-hover:rotate-180 transition duration-500">★</span>
                         <span className="font-medium md:text-large">{feature}</span>
                     </div>
                 )}
