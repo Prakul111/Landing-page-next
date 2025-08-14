@@ -11,7 +11,7 @@ export default function CallToAction() {
 
     useEffect(() =>{
         animation.current = animate(scope.current, { x: '-50%'}, { duration: 30, ease: 'linear', repeat: Infinity})
-    }, [])
+    }, [animate, scope]);
 
     useEffect(() => {
         if(animation.current) {
@@ -22,7 +22,7 @@ export default function CallToAction() {
 
             }
         }
-    }, [isHovered])
+    }, [isHovered]);
 
 
     return (
