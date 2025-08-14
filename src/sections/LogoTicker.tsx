@@ -1,4 +1,4 @@
-
+"use client"
 
 import quantumLogo from "@/assets/images/quantum.svg";
 import acmeLogo from "@/assets/images/acme-corp.svg";

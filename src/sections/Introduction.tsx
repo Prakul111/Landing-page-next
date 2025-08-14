@@ -1,4 +1,4 @@
-
+"use client"
 
 import Tag from "@/components/Tag";
 import { useScroll, useTransform } from "framer-motion";
