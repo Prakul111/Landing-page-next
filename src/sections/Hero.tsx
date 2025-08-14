@@ -85,7 +85,7 @@ export default function Hero() {
                                 ✨ 7.5 Million Seed Round Raised</div>
                   </div>
         <h1 className="text-6xl md:text-7xl lg:text-8xl font-medium text-center mt-6">Impactful Design Created Efforlessly</h1>
-        <p className="text-center text-xl text-white/50 mt-8">Design Tools Shouldn't slow you down. Layers Combines Powerful features with an intuitive interface
+        <p className="text-center text-xl text-white/50 mt-8">Design Tools Shouldn&apos;t slow you down. Layers Combines Powerful features with an intuitive interface
             that keep you in creative flow. </p>
             <form className="flex border border-white/15 rounded-full p-2 mt-8 max-w-lg mx-auto">
                 <input type="email" placeholder="Enter your email"
